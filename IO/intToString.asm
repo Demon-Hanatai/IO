@@ -7,10 +7,10 @@ PUBLIC IntToString
 
 .code
 IntToString PROC
-    mov rdi, rcx            ; Move the buffer address to RDI
-    mov rbx, rax            ; Copy the number to RBX for manipulation
+    mov rdi, rcx            
+    mov rbx, rax           
     add rdi, 20             
-    mov byte ptr [rdi], 0   ; Null-terminate the string
+    mov byte ptr [rdi], 0   
     mov r14,20
     ; Handle zero explicitly (special case)
     test rbx, rbx
@@ -20,17 +20,17 @@ IntToString PROC
     jmp done
 
 convert_number:
-    ; Convert each digit to ASCII
-    mov rcx, 10             ; Set divisor to 10
+    
+    mov rcx, 10           
 reverse_loop:
-    xor rdx, rdx            ; Clear RDX before division to avoid overflow
-    div rcx                 ; Divide RBX by 10, result in RAX, remainder in RDX
-    add dl, '0'             ; Convert the remainder to ASCII
-    dec rdi                 ; Move back in the buffer
+    xor rdx, rdx            
+    div rcx               
+    add dl, '0'            
+    dec rdi               
     dec r14
-    mov [rdi], dl           ; Store the ASCII character
-    cmp r14, 0h           ; Check if RBX is zero
-    jnz reverse_loop        ; If not, keep processing
+    mov [rdi], dl          
+    cmp r14, 0h          
+    jnz reverse_loop        
     jmp done
 
 done:
