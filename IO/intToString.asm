@@ -9,7 +9,7 @@ PUBLIC IntToString
 IntToString PROC
     mov rdi, rcx            ; Move the buffer address to RDI
     mov rbx, rax            ; Copy the number to RBX for manipulation
-    add rdi, 20             ; Assuming buffer is at least 20 bytes (max digits in a 64-bit number + null terminator)
+    add rdi, 20             
     mov byte ptr [rdi], 0   ; Null-terminate the string
     mov r14,20
     ; Handle zero explicitly (special case)
