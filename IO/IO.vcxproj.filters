@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Librarys">
+      <UniqueIdentifier>{0c2917e2-fa70-41f8-983b-379d4e8d5f56}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="..\Test\Main.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="IO.asm">
+      <Filter>Librarys</Filter>
+    </MASM>
+    <MASM Include="While.asm">
+      <Filter>Librarys</Filter>
+    </MASM>
+    <MASM Include="StringManagement.asm">
+      <Filter>Librarys</Filter>
+    </MASM>
+    <MASM Include="String.asm">
+      <Filter>Librarys</Filter>
+    </MASM>
+    <MASM Include="StringToInt.asm">
+      <Filter>Librarys</Filter>
+    </MASM>
+    <MASM Include="intToString.asm">
+      <Filter>Librarys</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>
